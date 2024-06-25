@@ -1,0 +1,20 @@
+Algo CDq(ele){
+    if(f==-1){
+        print(underflow)
+    }
+
+    else{
+        if(f==r){
+            f=r=-1
+        }
+
+        else{
+            if(f==max){
+                f=0
+            }
+            else{
+                f++;
+            }
+        }
+    }
+}

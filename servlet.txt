@@ -1,0 +1,29 @@
+class NameServlet extends HttpServlet{
+    @WebServlet("/NameServlet")
+    protected void doGet(HttpServletRequest req,HttpServletResponse res){
+
+       String name= req.getParameter("name");
+
+       res.setContent("text/html");
+       res.getWriter().println("<html><body>");
+       res.getWriter().println(name+"hello");
+       res.getWriter().println("</html></body>");
+
+       
+    }
+}
+
+web.xml:
+
+<webapp>
+
+servlet
+    servlet-name NameServlet
+    servlet-class NameServlet
+
+
+
+servlet-mapping
+    servlet-name NameServlet
+    url-pattern /NameServlet
+</webapp>
